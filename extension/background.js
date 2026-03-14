@@ -43,8 +43,12 @@ function nextTab() {
 }
 
 // WebSocket connection to local server
+let ws = null;
+
 function connectWebSocket() {
-  const ws = new WebSocket(WS_URL);
+  if (ws && (ws.readyState === WebSocket.CONNECTING || ws.readyState === WebSocket.OPEN)) return;
+
+  ws = new WebSocket(WS_URL);
 
   ws.onopen = () => console.log("Connected to local server");
 
@@ -56,11 +60,18 @@ function connectWebSocket() {
 
   ws.onclose = () => {
     console.log("Disconnected, retrying in 3s...");
+    ws = null;
     setTimeout(connectWebSocket, 3000);
   };
 
   ws.onerror = () => ws.close();
 }
+
+// Keep the service worker alive so Chrome doesn't kill it and drop the WS connection
+chrome.alarms.create("keepAlive", { periodInMinutes: 0.4 });
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === "keepAlive") connectWebSocket();
+});
 
 connectWebSocket();
 

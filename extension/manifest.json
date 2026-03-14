@@ -8,7 +8,7 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "permissions": ["tabs", "scripting"],
+  "permissions": ["tabs", "scripting", "alarms"],
   "host_permissions": ["*://*.twitch.tv/*"],
   "background": {
     "service_worker": "background.js"
