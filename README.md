@@ -1,6 +1,6 @@
 # Twitch Controller
 
-Chrome extension + local server for controlling Twitch tabs from any application (e.g. Steam Deck buttons, AutoHotkey, etc.).
+Chrome extension + local server for controlling Twitch tabs from any application (e.g. Steam Deck buttons, AutoHotkey, etc.)
 
 ## Features
 
