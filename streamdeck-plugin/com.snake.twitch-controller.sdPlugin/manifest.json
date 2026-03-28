@@ -1,0 +1,154 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Name": "Twitch Controller",
+  "Version": "1.0.0.0",
+  "Author": "snake",
+  "Description": "Control Twitch tabs: mute, pause, next channel, chat, theater mode.",
+  "Icon": "imgs/plugin/plugin",
+  "CategoryIcon": "imgs/plugin/category",
+  "Category": "Twitch Controller",
+  "CodePath": "bin/plugin.js",
+  "UUID": "com.snake.twitch-controller",
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "6.5"
+  },
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Nodejs": {
+    "Version": "20",
+    "Debug": "enabled"
+  },
+  "Actions": [
+    {
+      "Name": "Mute / Unmute",
+      "UUID": "com.snake.twitch-controller.mute",
+      "Icon": "imgs/actions/mute/icon",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/actions/mute/key",
+          "TitleAlignment": "bottom",
+          "Title": ""
+        }
+      ],
+      "Tooltip": "Toggle mute on Twitch player"
+    },
+    {
+      "Name": "Play / Pause",
+      "UUID": "com.snake.twitch-controller.pause",
+      "Icon": "imgs/actions/pause/icon",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/actions/pause/key",
+          "TitleAlignment": "bottom",
+          "Title": ""
+        }
+      ],
+      "Tooltip": "Toggle play/pause on Twitch stream"
+    },
+    {
+      "Name": "Next Channel",
+      "UUID": "com.snake.twitch-controller.next",
+      "Icon": "imgs/actions/next/icon",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/actions/next/key",
+          "TitleAlignment": "bottom",
+          "Title": ""
+        }
+      ],
+      "Tooltip": "Switch to next Twitch tab"
+    },
+    {
+      "Name": "Toggle Chat",
+      "UUID": "com.snake.twitch-controller.chat",
+      "Icon": "imgs/actions/chat/icon",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/actions/chat/key",
+          "TitleAlignment": "bottom",
+          "Title": ""
+        }
+      ],
+      "Tooltip": "Show/hide Twitch chat panel"
+    },
+    {
+      "Name": "Theater Mode",
+      "UUID": "com.snake.twitch-controller.theater",
+      "Icon": "imgs/actions/theater/icon",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/actions/theater/key",
+          "TitleAlignment": "bottom",
+          "Title": ""
+        }
+      ],
+      "Tooltip": "Toggle theater mode"
+    },
+    {
+      "Name": "Volume Up",
+      "UUID": "com.snake.twitch-controller.volumeup",
+      "Icon": "imgs/actions/volume-up/icon",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/actions/volume-up/key",
+          "TitleAlignment": "bottom",
+          "Title": ""
+        }
+      ],
+      "Tooltip": "Increase Twitch player volume"
+    },
+    {
+      "Name": "Volume Down",
+      "UUID": "com.snake.twitch-controller.volumedown",
+      "Icon": "imgs/actions/volume-down/icon",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/actions/volume-down/key",
+          "TitleAlignment": "bottom",
+          "Title": ""
+        }
+      ],
+      "Tooltip": "Decrease Twitch player volume"
+    },
+    {
+      "Name": "Close Tab",
+      "UUID": "com.snake.twitch-controller.close",
+      "Icon": "imgs/actions/close/icon",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/actions/close/key",
+          "TitleAlignment": "bottom",
+          "Title": ""
+        }
+      ],
+      "Tooltip": "Close current Twitch tab"
+    },
+    {
+      "Name": "Close All Tabs",
+      "UUID": "com.snake.twitch-controller.closeall",
+      "Icon": "imgs/actions/close-all/icon",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/actions/close-all/key",
+          "TitleAlignment": "bottom",
+          "Title": ""
+        }
+      ],
+      "Tooltip": "Close all Twitch tabs"
+    }
+  ]
+}

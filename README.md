@@ -1,32 +1,39 @@
 # Twitch Controller
 
-Chrome extension + local server for controlling Twitch tabs from any application (e.g. Steam Deck buttons, AutoHotkey, etc.)
+Chrome extension + local server + Stream Deck plugin for controlling Twitch tabs globally from any application.
 
 ## Features
 
-- Toggle mute on the current Twitch tab
-- Toggle pause/resume on the current Twitch tab
-- Cycle through multiple Twitch tabs
+- Mute / unmute (player-level, not tab-level)
+- Play / pause stream
+- Cycle through Twitch tabs
+- Toggle chat panel
+- Toggle theater mode
+- Volume up / down (10% steps)
+- Close current / all Twitch tabs
+- Dynamic Stream Deck icons with channel avatar and state
 - Works globally — Chrome doesn't need to be in focus
 
 ## Structure
 
 ```
-twitch-mute/
-  extension/        # Chrome extension
-  server/           # Local Node.js server
-  start-server.bat  # Start server (with console, for debugging)
-  start-server.vbs  # Start server silently (for everyday use)
-  stop-server.bat   # Stop server
-  mute.vbs          # Send mute command
-  pause.vbs         # Send pause command
-  next.vbs          # Switch to next Twitch tab
+twitch-controller/
+  extension/              # Chrome extension (Manifest V3)
+  server/                 # Local Node.js server
+  streamdeck-plugin/      # Stream Deck plugin (TypeScript)
+    src/                  # Plugin source code
+    com.snake.twitch-controller.sdPlugin/  # Built plugin
+  docs/                   # Documentation and plans
+  start-server.bat        # Start server (with console, for debugging)
+  start-server-hidden.vbs # Start server silently (for everyday use)
+  stop-server.bat         # Stop server
 ```
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/) v18+
+- [Node.js](https://nodejs.org/) v20+
 - Google Chrome
+- Elgato Stream Deck + Stream Deck software 6.5+
 
 ## Setup
 
@@ -44,12 +51,20 @@ npm install
 3. Click **Load unpacked**
 4. Select the `extension/` folder
 
-### 3. Configure keyboard shortcuts (optional)
+### 3. Install Stream Deck plugin
 
-Go to `chrome://extensions/shortcuts` and assign shortcuts for:
-- **Toggle mute**
-- **Toggle pause/resume**
-- **Switch to next Twitch tab**
+The plugin is already linked via junction. If you need to re-link:
+
+```powershell
+# Run in PowerShell
+New-Item -ItemType Junction -Path "$env:APPDATA\Elgato\StreamDeck\Plugins\com.snake.twitch-controller.sdPlugin" -Target "<full path to>\streamdeck-plugin\com.snake.twitch-controller.sdPlugin"
+```
+
+Then restart Stream Deck.
+
+### 4. Configure keyboard shortcuts (optional)
+
+Go to `chrome://extensions/shortcuts` and assign shortcuts for mute, pause, and next tab.
 
 ## Running
 
@@ -67,32 +82,53 @@ Go to `chrome://extensions/shortcuts` and assign shortcuts for:
 1. Press `Win+R`, type `shell:startup`, press Enter
 2. Put a shortcut to `start-server-hidden.vbs` in that folder
 
-## Usage
+## Stream Deck Actions
 
-Run `.vbs` files directly or bind them to buttons (e.g. Steam Deck):
+| Action       | Command      | Description                     |
+|-------------|-------------|----------------------------------|
+| Mute        | `mute`       | Toggle mute in Twitch player     |
+| Play/Pause  | `pause`      | Toggle play/pause                |
+| Next        | `next`       | Switch to next Twitch tab        |
+| Chat        | `chat`       | Show/hide chat panel             |
+| Theater     | `theater`    | Toggle theater mode              |
+| Volume Up   | `volumeup`   | Increase volume by 10%           |
+| Volume Down | `volumedown` | Decrease volume by 10%           |
+| Close Tab   | `close`      | Close current Twitch tab         |
+| Close All   | `closeall`   | Close all Twitch tabs            |
 
-| File | Action |
-|------|--------|
-| `mute.vbs` | Mute / unmute current Twitch tab |
-| `pause.vbs` | Pause / resume current Twitch tab |
-| `next.vbs` | Switch to next Twitch tab (wraps around) |
+## HTTP API
 
-The commands can also be triggered via HTTP directly:
+Commands can also be triggered via HTTP:
 
 ```
 http://127.0.0.1:9999/mute
 http://127.0.0.1:9999/pause
 http://127.0.0.1:9999/next
+http://127.0.0.1:9999/chat
+http://127.0.0.1:9999/theater
+http://127.0.0.1:9999/volumeup
+http://127.0.0.1:9999/volumedown
+http://127.0.0.1:9999/close
+http://127.0.0.1:9999/closeall
 ```
 
 ## How it works
 
 ```
-vbs file → curl → HTTP server (port 9999)
-                       ↓
-              WebSocket (port 9998)
-                       ↓
-           Chrome extension → Twitch tab
+Stream Deck Plugin ─┐
+                    ├─ WebSocket (port 9998) ─→ Chrome Extension ─→ Twitch tab
+HTTP / curl ────────┘        ↑
+                             │
+                     Node.js Server
+                    HTTP (port 9999)
 ```
 
-The extension maintains a persistent WebSocket connection to the local server and reconnects automatically if the server restarts.
+The server routes commands to the Chrome extension and forwards state updates (muted, paused, volume, channel, avatar) back to the Stream Deck plugin for dynamic icon updates.
+
+## Building the plugin
+
+```bash
+cd streamdeck-plugin
+npm install
+npm run build
+```

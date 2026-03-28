@@ -1,0 +1,53 @@
+2026-03-28T16:24:32.631Z DEBUG RegistrationParameters: port=28196
+2026-03-28T16:24:32.633Z DEBUG RegistrationParameters: pluginUUID=6b750ad79df8f641108e3cddd56c979a
+2026-03-28T16:24:32.633Z DEBUG RegistrationParameters: registerEvent=registerPlugin
+2026-03-28T16:24:32.634Z DEBUG RegistrationParameters: info={"application":{"font":"Segoe UI","language":"en","platform":"windows","platformVersion":"10.0.26200","version":"7.3.1.22604"},"colors":{"buttonMouseOverBackgroundColor":"#464646FF","buttonPressedBackgroundColor":"#303030FF","buttonPressedBorderColor":"#646464FF","buttonPressedTextColor":"#969696FF","highlightColor":"#0078FFFF"},"devicePixelRatio":1,"devices":[{"id":"c886b04bfb7b5d708d695e5b92e8c88d","name":"Stream Deck","size":{"columns":5,"rows":3},"type":0}],"plugin":{"uuid":"com.snake.twitch-controller","version":"1.0.0.0"}}
+2026-03-28T16:24:32.641Z INFO  Connected to Twitch controller server
+2026-03-28T16:24:34.616Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:24:34.691Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:24:39.774Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/f2683fc9-1c2a-4b85-9c38-487aeaa0357f-profile_image-70x70.png
+2026-03-28T16:24:39.777Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/f2683fc9-1c2a-4b85-9c38-487aeaa0357f-profile_image-70x70.png
+2026-03-28T16:24:41.068Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:24:41.069Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:24:42.173Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:24:42.174Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:24:43.153Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/f2683fc9-1c2a-4b85-9c38-487aeaa0357f-profile_image-70x70.png
+2026-03-28T16:24:43.154Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/f2683fc9-1c2a-4b85-9c38-487aeaa0357f-profile_image-70x70.png
+2026-03-28T16:24:44.203Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:24:44.204Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:24:45.201Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:24:45.202Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:24:49.056Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/f2683fc9-1c2a-4b85-9c38-487aeaa0357f-profile_image-70x70.png
+2026-03-28T16:24:49.057Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/f2683fc9-1c2a-4b85-9c38-487aeaa0357f-profile_image-70x70.png
+2026-03-28T16:24:50.567Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:24:50.569Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:24:52.146Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:24:52.147Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:24:52.626Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/f2683fc9-1c2a-4b85-9c38-487aeaa0357f-profile_image-70x70.png
+2026-03-28T16:24:52.627Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/f2683fc9-1c2a-4b85-9c38-487aeaa0357f-profile_image-70x70.png
+2026-03-28T16:24:53.363Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:24:53.364Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:24:54.142Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:24:54.143Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:24:59.273Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/f2683fc9-1c2a-4b85-9c38-487aeaa0357f-profile_image-70x70.png
+2026-03-28T16:24:59.274Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/f2683fc9-1c2a-4b85-9c38-487aeaa0357f-profile_image-70x70.png
+2026-03-28T16:25:01.376Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:25:01.377Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:25:02.297Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:25:02.298Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:25:08.004Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/f2683fc9-1c2a-4b85-9c38-487aeaa0357f-profile_image-70x70.png
+2026-03-28T16:25:08.005Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/f2683fc9-1c2a-4b85-9c38-487aeaa0357f-profile_image-70x70.png
+2026-03-28T16:25:11.231Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:25:11.232Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:25:12.150Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:25:12.151Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:25:24.126Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/f2683fc9-1c2a-4b85-9c38-487aeaa0357f-profile_image-70x70.png
+2026-03-28T16:25:24.128Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/f2683fc9-1c2a-4b85-9c38-487aeaa0357f-profile_image-70x70.png
+2026-03-28T16:25:25.062Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:25:25.063Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:25:27.672Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:25:27.673Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:27:39.412Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:27:39.414Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/7a62328b-023f-422e-9388-686e7bfd4f1a-profile_image-70x70.png
+2026-03-28T16:27:44.411Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
+2026-03-28T16:27:44.413Z INFO  Fetching avatar: https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png
