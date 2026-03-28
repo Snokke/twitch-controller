@@ -2,3 +2,9 @@ node_modules/
 server/node_modules/
 server/package-lock.json
 package-lock.json
+
+# Stream Deck plugin
+streamdeck-plugin/com.snake.twitch-controller.sdPlugin/bin/plugin.js
+streamdeck-plugin/com.snake.twitch-controller.sdPlugin/bin/plugin.js.map
+streamdeck-plugin/com.snake.twitch-controller.sdPlugin/bin/node_modules/
+streamdeck-plugin/com.snake.twitch-controller.sdPlugin/logs/
