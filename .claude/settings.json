@@ -58,6 +58,9 @@
       "Read(//d/My projects/twitch-controller/$APPDATA/Microsoft/Windows/Start Menu/Programs/**)",
       "Bash(powershell.exe -Command \":*)",
       "Read(//d/My projects/twitch-controller/$APPDATA/Microsoft/Windows/Start Menu/Programs/Startup/**)"
+    ],
+    "additionalDirectories": [
+      "d:\\My projects\\twitch-controller\\streamdeck-plugin\\com.snake.twitch-controller.sdPlugin\\logs"
     ]
   }
 }
