@@ -57,7 +57,10 @@
       "Read(//d/My projects/twitch-controller/streamdeck-plugin/com.snake.twitch-controller.sdPlugin/logs/**)",
       "Read(//d/My projects/twitch-controller/$APPDATA/Microsoft/Windows/Start Menu/Programs/**)",
       "Bash(powershell.exe -Command \":*)",
-      "Read(//d/My projects/twitch-controller/$APPDATA/Microsoft/Windows/Start Menu/Programs/Startup/**)"
+      "Read(//d/My projects/twitch-controller/$APPDATA/Microsoft/Windows/Start Menu/Programs/Startup/**)",
+      "Bash(cmd.exe /c \"dir /AL \\\\\"%APPDATA%\\\\\\\\Elgato\\\\\\\\StreamDeck\\\\\\\\Plugins\\\\\\\\\\\\\" 2>NUL\")",
+      "Bash(cmd.exe /c \"rmdir \\\\\"%APPDATA%\\\\\\\\Elgato\\\\\\\\StreamDeck\\\\\\\\Plugins\\\\\\\\com.snake.twitch-controller.sdPlugin\\\\\"\")",
+      "Bash(cmd.exe /c \"rmdir \\\\\"%APPDATA%\\\\\\\\Elgato\\\\\\\\StreamDeck\\\\\\\\Plugins\\\\\\\\com.snake.twitch-controller.sdPlugin\\\\\" 2>&1\")"
     ],
     "additionalDirectories": [
       "d:\\My projects\\twitch-controller\\streamdeck-plugin\\com.snake.twitch-controller.sdPlugin\\logs"

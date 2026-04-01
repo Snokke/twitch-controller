@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -c -w"
+    "watch": "rollup -c -w",
+    "deploy": "npm run build && node -e \"const fs=require('fs');const p=require('path');const src='com.snake.twitch-controller.sdPlugin';const dest=p.join(process.env.APPDATA,'Elgato/StreamDeck/Plugins',src);fs.cpSync(src,dest,{recursive:true,force:true});console.log('Deployed to',dest)\""
   },
   "dependencies": {
     "@elgato/streamdeck": "^2.0.0"

@@ -17,7 +17,8 @@ cd server && npm start     # Start server (node server.js)
 ### Stream Deck Plugin
 ```bash
 cd streamdeck-plugin && npm install   # Install dependencies
-cd streamdeck-plugin && npm run build # Build plugin (rollup + TypeScript)
+cd streamdeck-plugin && npm run build  # Build plugin (rollup + TypeScript)
+cd streamdeck-plugin && npm run deploy # Build + copy to Stream Deck plugins folder
 ```
 
 ### Windows Scripts
@@ -58,7 +59,7 @@ HTTP / curl ────────┘        ↑
    - Dynamic SVG icons reflecting current state
    - Mute and Pause buttons show channel avatar as background
    - Built with Rollup, output in `com.snake.twitch-controller.sdPlugin/`
-   - Installed via junction to `%APPDATA%\Elgato\StreamDeck\Plugins\`
+   - Deployed via `npm run deploy` (copies files to `%APPDATA%\Elgato\StreamDeck\Plugins\`)
 
 4. **HTTP API** — All commands available as `GET /command` on port 9999 for external tools (AutoHotkey, curl, etc.)
 
